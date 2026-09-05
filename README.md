@@ -8,74 +8,118 @@
   <a href="https://github.com/Mohammad2116"><img src="https://img.shields.io/badge/GitHub-Mohammad2116-black?style=flat-square&logo=github&logoColor=white" /></a>
 </p>
 
+<p align="left">
+  <img src="https://img.shields.io/badge/Java-21-orange?style=flat-square&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/PostgreSQL-16-316192?style=flat-square&logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Redis-8-DC382D?style=flat-square&logo=redis&logoColor=white" />
+  <img src="https://img.shields.io/badge/Kafka-Event_Driven-231F20?style=flat-square&logo=apachekafka&logoColor=white" />
+  <img src="https://img.shields.io/badge/Docker-Containerized-2496ED?style=flat-square&logo=docker&logoColor=white" />
+</p>
+
+> **Backend engineer focused on Java, Spring Boot, security, distributed systems, and production-minded architecture.**
+>
+> Open to **Senior Backend / Java / Spring Boot** opportunities, including remote roles.
+
 ---
 
 ## 🚀 About Me
 
 I’m a backend-focused software engineer with **15+ years of experience** across software development, game development, technical leadership, and computer science education.
 
-My current focus is building **secure, scalable, and maintainable Java backend systems** with Spring Boot and distributed-system architecture. I enjoy going beyond simply making an API work — I care about **architecture, reliability, performance, security, observability, and clean engineering decisions**.
+Today, I focus on building **secure, scalable, maintainable backend systems** with Java and Spring Boot. I’m especially interested in the engineering problems behind production systems: service boundaries, authentication, data consistency, caching, asynchronous processing, failure handling, and deployment.
 
-> **Current focus:** Java · Spring Boot · Distributed Systems · Microservices · Security · PostgreSQL · Redis · Kafka · Docker · CI/CD
-
----
-
-## 🧠 Engineering Focus
-
-- 🏗️ **Backend Architecture** — layered architecture, modular design, microservices, service discovery
-- 🔐 **Security** — Spring Security, JWT access/refresh tokens, RBAC, token rotation and revocation
-- ⚡ **Performance** — Redis caching, cache-aside patterns, popularity-aware TTL strategies
-- 🔄 **Distributed Systems** — asynchronous processing, Kafka, transactional Outbox pattern
-- 🗄️ **Data** — PostgreSQL, JPA/Hibernate, Flyway, transaction management
-- 🚀 **DevOps** — Docker, Docker Compose, GitHub Actions, Linux, reverse proxies and cloud deployment
-- 🧪 **API Engineering** — REST, OpenAPI/Swagger, DTO mapping, validation and resilient service boundaries
+I believe good backend engineering is not just about making an API work — it is about making the system **reliable, understandable, secure, and ready to evolve**.
 
 ---
 
-## ⭐ Featured Project — AspireApps Linker
+## 🧠 Core Engineering Skills
 
-### A production-style distributed URL shortener built to demonstrate real backend engineering
+- 🏗️ **Backend Architecture** — layered architecture, modular design, microservices, service boundaries
+- 🔐 **Security** — Spring Security, JWT, access/refresh tokens, RBAC, token rotation & revocation
+- ⚡ **Performance** — Redis, cache-aside patterns, TTL strategies, database optimization
+- 🔄 **Distributed Systems** — Kafka, asynchronous processing, service discovery, transactional Outbox
+- 🗄️ **Persistence** — PostgreSQL, JPA/Hibernate, transactions, Flyway migrations
+- 🌐 **API Development** — REST, OpenAPI/Swagger, DTOs, validation, OpenFeign
+- 🚀 **DevOps** — Docker, Docker Compose, GitHub Actions, Linux, Caddy, Cloudflare
 
-**AspireApps Linker** is a Java/Spring Boot microservices system designed around the kinds of architectural concerns found in production distributed applications.
+---
 
-**Architecture highlights:**
+# ⭐ Featured Project: AspireApps Linker
 
-- 🔐 JWT-based authentication with access & refresh token lifecycle management
-- 🧩 Spring Cloud Gateway + Eureka service discovery
-- ⚡ Redis cache-aside strategy with popularity-aware expiration
-- 📊 Kafka-based asynchronous analytics pipeline
-- 📦 Transactional **Outbox Pattern** for reliable event publishing
-- 🗃️ PostgreSQL with Flyway versioned migrations
-- 🔗 OpenFeign for service-to-service communication
-- 🐳 Docker Compose for reproducible environments
-- 🔄 GitHub Actions CI/CD and container-based deployment
-- 🌐 Separate web and REST API entry points behind a reverse proxy
+### Production-oriented distributed URL shortener
 
-**Request flow:**
+[**AspireApps Linker**](https://github.com/Mohammad2116/AspireApps_Linker) is my main backend portfolio project — a Java/Spring Boot microservices system built to demonstrate practical distributed-system engineering rather than a simple CRUD application.
+
+### What it demonstrates
+
+| Area | Implementation |
+| :--- | :--- |
+| **Architecture** | Spring Boot microservices + clear service boundaries |
+| **Gateway** | Spring Cloud Gateway |
+| **Discovery** | Netflix Eureka |
+| **Authentication** | Spring Security + JWT access/refresh tokens |
+| **Token Security** | Persistent hashed refresh tokens, rotation & revocation |
+| **Caching** | Redis cache-aside + popularity-aware TTL |
+| **Messaging** | Apache Kafka + asynchronous analytics |
+| **Reliability** | Transactional Outbox Pattern |
+| **Persistence** | PostgreSQL + JPA/Hibernate |
+| **Migrations** | Flyway |
+| **Service Calls** | OpenFeign |
+| **Deployment** | Docker Compose + GitHub Actions + GHCR |
+| **Edge / Routing** | Caddy + Cloudflare |
+
+### High-level architecture
 
 ```text
-                    ┌──────────────────────┐
-                    │       Client         │
-                    └──────────┬───────────┘
-                               │
-                               ▼
-                    ┌──────────────────────┐
-                    │   Gateway / Caddy    │
-                    └──────────┬───────────┘
-                               │
-                ┌──────────────┼──────────────┐
-                ▼              ▼              ▼
-          User Service   Links Service   Analysis Service
-                │              │              │
-                ▼              ▼              ▼
-           PostgreSQL        Redis          Kafka
-                │              │              │
-                └──────────────┴──────┬───────┘
-                                      ▼
-                              Transactional Outbox
+                         ┌──────────────────────┐
+                         │       Clients        │
+                         │ Browser / REST API   │
+                         └──────────┬───────────┘
+                                    │
+                         ┌──────────▼───────────┐
+                         │   Caddy / Cloudflare │
+                         └──────────┬───────────┘
+                                    │
+                         ┌──────────▼───────────┐
+                         │   Spring Cloud       │
+                         │       Gateway        │
+                         └──────┬───────┬───────┘
+                                │       │
+                  ┌─────────────┘       └─────────────┐
+                  ▼                                   ▼
+          ┌──────────────┐                    ┌──────────────┐
+          │ User Service │                    │ Links Service│
+          │ Auth / Users │                    │ Links / Redis│
+          └───────┬──────┘                    └───────┬──────┘
+                  │                                   │
+                  └────────────────┬──────────────────┘
+                                   │
+                            ┌──────▼──────┐
+                            │   Eureka    │
+                            │  Discovery  │
+                            └─────────────┘
+
+                         ┌────────────────┐
+                         │     Kafka      │
+                         │ Async Events   │
+                         └───────┬────────┘
+                                 ▼
+                         ┌───────────────┐
+                         │    Analysis   │
+                         │    Service    │
+                         └───────┬───────┘
+                                 ▼
+                         ┌───────────────┐
+                         │  PostgreSQL   │
+                         └───────────────┘
 ```
 
-🔗 **Project:** [AspireApps_Linker](https://github.com/Mohammad2116/AspireApps_Linker)
+### Live project
+
+- 🌐 **Web:** [aspireapps.ir/linker](https://aspireapps.ir/linker)
+- 🔌 **API:** [api.aspireapps.ir/linker](https://api.aspireapps.ir/linker)
+- 💻 **Source:** [GitHub Repository](https://github.com/Mohammad2116/AspireApps_Linker)
 
 ---
 
@@ -85,20 +129,20 @@ My current focus is building **secure, scalable, and maintainable Java backend s
 | :--- | :--- |
 | **Languages** | Java, C++, C#, Python, JavaScript, SQL |
 | **Backend** | Spring Boot, Spring MVC, Spring Data JPA, Hibernate, Thymeleaf |
-| **Security** | Spring Security, JWT, OAuth2 concepts, RBAC, session/cookie authentication |
+| **Security** | Spring Security, JWT, BCrypt, RBAC |
 | **Distributed Systems** | Spring Cloud Gateway, Eureka, OpenFeign, Kafka, Outbox Pattern |
-| **Data & Caching** | PostgreSQL, Redis, Flyway |
+| **Data** | PostgreSQL, Redis, Flyway |
 | **API** | REST, OpenAPI, Swagger, DTOs, MapStruct |
-| **DevOps** | Docker, Docker Compose, GitHub Actions, Maven, Linux, Caddy |
-| **Development** | Git, IntelliJ IDEA, CI/CD, automated migrations |
+| **DevOps** | Docker, Docker Compose, GitHub Actions, Maven, Linux, Caddy, Cloudflare |
+| **Development** | Git, IntelliJ IDEA, CI/CD |
 
 ---
 
-## 📌 Other Projects
+## 📌 Selected Projects
 
 ### 🛒 SpringMart — E-Commerce Backend
 
-A production-oriented Spring Boot REST API demonstrating authentication, authorization, persistence, caching, API documentation, and automated deployment.
+A production-oriented Spring Boot REST API demonstrating authentication, authorization, persistence, caching, API documentation, database migrations, and automated deployment.
 
 **Stack:** Java · Spring Boot · Spring Security · PostgreSQL · Redis · Docker · Flyway · Swagger
 
@@ -106,7 +150,7 @@ A production-oriented Spring Boot REST API demonstrating authentication, authori
 
 ### 🔐 Spring JWT Auth Service
 
-A dedicated authentication service focused on secure JWT access/refresh token handling, persistent token management, and clean service boundaries.
+A dedicated authentication service focused on secure JWT access/refresh token handling, persistent token management, and clean security boundaries.
 
 **Stack:** Java · Spring Boot · Spring Security · JWT · OpenAPI
 
@@ -135,6 +179,16 @@ More than a decade of teaching and mentoring in programming, software engineerin
 
 ---
 
+## 🎯 What I Bring to a Backend Team
+
+- Strong software-development experience combined with formal teaching and mentoring experience
+- Practical understanding of **authentication, authorization, caching, messaging, persistence, and distributed architecture**
+- Comfortable working across application code, databases, containers, CI/CD, and Linux environments
+- Strong interest in understanding **why** an architecture works, not only how to implement it
+- Experience turning complex requirements into maintainable backend components and service boundaries
+
+---
+
 ## 📊 GitHub Activity
 
 <p align="left">
@@ -154,10 +208,10 @@ More than a decade of teaching and mentoring in programming, software engineerin
 
 ---
 
-### ⚙️ What I Like Building
+### ⚙️ Engineering Philosophy
 
-**Systems that are secure by design, fast under load, observable in production, and understandable six months after they were written.**
+> **Build systems that are secure by design, reliable under failure, efficient under load, and understandable six months after they were written.**
 
 ---
 
-⭐ If you're interested in backend engineering, distributed systems, or Java/Spring architecture, feel free to explore the repositories above.
+⭐ If you're interested in **Java, Spring Boot, backend engineering, or distributed systems**, feel free to explore my repositories.
