@@ -117,7 +117,7 @@ I believe good backend engineering is not just about making an API work — it i
 
 ### Live project
 
-- 🌐 **Web:** [aspireapps.ir/linker](https://aspireapps.ir/linker)
+- 🌐 **Web:** [aspireapps.ir/linker](https://aspireapps.ir/linker/home)
 - 🔌 **API:** [api.aspireapps.ir/linker](https://api.aspireapps.ir/linker)
 - 💻 **Source:** [GitHub Repository](https://github.com/Mohammad2116/AspireApps_Linker)
 
@@ -200,7 +200,7 @@ More than a decade of teaching and mentoring in programming, software engineerin
 
 ## 📫 Contact
 
-- 🌐 **Website:** [aspireapps.ir](https://www.aspireapps.ir)
+- 🌐 **Website:** [aspireapps.ir](https://aspireapps.ir)
 - 📧 **Email:** [mohammad2116@gmail.com](mailto:mohammad2116@gmail.com)
 - 📍 **Location:** Iran · Open to remote opportunities globally
 - 📄 [English Resume](https://github.com/Mohammad2116/Mohammad2116/blob/main/Prof%20Resume%20(En).pdf)
